@@ -9,7 +9,7 @@ if (mw.config.get('wgCanonicalSpecialPageName') === 'Prefixindex' ) {
 			$list.append('<li>' + $(this).html() + '</li>');
 		});
 		$table.replaceWith($list);
-		if (filterLists) {
+		if (typeof filterLists !== 'undefined' ) {
 			filterLists.load();
 			filterLists.buildForm();
 		}

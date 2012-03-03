@@ -1,6 +1,6 @@
 /**
  * Convert [[Special:PrefixIndex]] table to list and add the "lifilter", if available
- * @traking: [[Special:GlobalUsage/User:Helder.wiki/Tools/ConvertPrefixIndexToList.js]] ([[File:User:Helder.wiki/Tools/ConvertPrefixIndexToList.js]])
+ * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/ConvertPrefixIndexToList.js]] ([[File:User:Helder.wiki/Tools/ConvertPrefixIndexToList.js]])
  */
 if (mw.config.get('wgCanonicalSpecialPageName') === 'Prefixindex' ) {
     $(function(){

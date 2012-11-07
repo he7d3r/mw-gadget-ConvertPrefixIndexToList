@@ -1,7 +1,13 @@
 /**
  * Convert [[Special:PrefixIndex]] table to list and add the "lifilter", if available
+ * @author: [[User:Helder.wiki]]
  * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/ConvertPrefixIndexToList.js]] ([[File:User:Helder.wiki/Tools/ConvertPrefixIndexToList.js]])
  */
+/*jslint browser: true, white: true*/
+/*global jQuery, mediaWiki, filterLists */
+( function ( mw, $ ) {
+'use strict';
+
 if (mw.config.get('wgCanonicalSpecialPageName') === 'Prefixindex' ) {
 	$(function(){
 		var	$table = $('#mw-prefixindex-list-table'),
@@ -10,9 +16,11 @@ if (mw.config.get('wgCanonicalSpecialPageName') === 'Prefixindex' ) {
 			$list.append('<li>' + $(this).html() + '</li>');
 		});
 		$table.replaceWith($list);
-		if ( typeof filterLists !== 'undefined' && $.isFunction(filterLists.load) && $.isFunction(filterLists.buildForm) ) {
+		if ( $.isFunction( window.filterLists && filterLists.load ) && $.isFunction( filterLists.buildForm ) ) {
 			filterLists.load();
 			filterLists.buildForm();
 		}
 	});
 }
+
+}( mediaWiki, jQuery ) );

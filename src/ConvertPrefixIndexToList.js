@@ -3,7 +3,7 @@
  * @author: [[User:Helder.wiki]]
  * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/ConvertPrefixIndexToList.js]] ([[File:User:Helder.wiki/Tools/ConvertPrefixIndexToList.js]])
  */
-/*jslint browser: true, white: true*/
+/*jslint browser: true */
 /*global jQuery, mediaWiki, filterLists */
 ( function ( mw, $ ) {
 'use strict';

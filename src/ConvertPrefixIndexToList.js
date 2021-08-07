@@ -14,7 +14,7 @@
 				$list.append( '<li>' + $( this ).html() + '</li>' );
 			} );
 			$table.replaceWith( $list );
-			if ( $.isFunction( window.filterLists && filterLists.load ) && $.isFunction( filterLists.buildForm ) ) {
+			if ( window.filterLists && typeof filterLists.load === 'function' && typeof filterLists.buildForm === 'function' ) {
 				filterLists.load();
 				filterLists.buildForm();
 			}
